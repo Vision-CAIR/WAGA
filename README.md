@@ -1,1 +1,1 @@
-# wolfflin-affective-generative-analysis
+# wölfflin-affective-generative-analysis
