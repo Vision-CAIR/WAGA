@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Wölfflin's Affective Generative Analysis</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="img/seal_icon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+<div class="container" id="main">
+    <div class="row">
+
+        <h2 class="col-md-12 text-center" style="padding-bottom:20px">
+            <b>Wölfflin's Affective Generative Analysis for Visual Art</br></b>
+            <span style="font-size:18pt"> ICCC 2021 </span>
+            <span style="font-size:18pt"> </span>
+            <br>
+        </h2>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <ul class="list-inline" style="font-size:18pt">
+                <li>
+                    <a href="https://divyanshj16.github.io/">
+                        Divyansh Jha
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://kr.linkedin.com/in/hanna-hawon-chang">
+                        Hanna H. Chang
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="http://www.mohamed-elhoseiny.com/">
+                        Mohamed Elhoseiny
+                    </a>
+                </li>
+                </br>King Abdullah University of Science and Technology (KAUST)
+
+                <!-- <div>
+                    
+                    <img src="assets/kaust-logo.png" alt="KAUST" class="img-responsive img-small" style="max-height: 200px; max-width: 200px;">
+                </div> -->
+                
+           
+            </ul>
+
+        </div>
+    </div>
+
+
+    <div class="row" style="padding-top:20px">
+        <div class="col-md-6 col-md-offset-3 text-center">
+            <ul class="nav nav-pills nav-justified">
+                <li>
+                    <a href="assets/paper.pdf">
+                        <h4><strong>[ Paper ]</strong></h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="#video">
+                        <h4><strong>[ Video ]</strong></h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Vision-CAIR/WAGA">
+                        <h4><strong>[ Code ]</strong></h4>
+                    </a>
+                </li>  
+                <li>
+                    <a href="#">
+                        <h4><strong>[ Data (soon)]</strong></h4>
+                    </a>
+                </li>                              
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="row" style="padding-bottom:30px">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                <b>Abstract</b>
+            </h3>
+            <p class="text-justify">
+                We propose <i>Wölfflin Affective Generative Analysis (WAGA)</i> as an approach to understand and analyze 
+                the progress of machine-generated artworks in contrast to real art and their connection to our human 
+                artistic heritage, and how they extend the shape of art history.
+                Specifically, we studied the machine-generated art after integrating creativity losses in the 
+                state-of-the-art generative models e.g., StyleGAN v1 and v2. We denote these models as Style Creative 
+                Adversarial Networks v1 and v2; in short, StyleCAN v1 and v2.  
+                We contrasted the learned representation between real and generated artworks through correlation 
+                analysis between constructed emotion (collected through Amazon MTurk) and  
+                Heinrich Wölfflin (1846-1945)'s principles of art history.  Analogous to the recent ArtEmis dataset, 
+                we collected constructed emotions and explanations on generated art instead of real art to study the 
+                contrast. 
+                To enable Wölfflin Affective Generative Analysis, we collected 45,000  annotations 
+                (1800 paintings x 5 principles x 5 participants) for each of the five Wölfflin principles on 
+                1800 artworks; 1000 real and 800 generated. Our analysis shows a correlation exists between the 
+                Wölfflin principles and the emotions.
+            </p>
+            <figure style='border:1px solid #cfcdcd;' >
+                <img src="assets/AIemotion3.png" alt="teaser1"/>
+                <hr>
+                <figcaption style="font-size:12pt; text-align: center;">
+                    <h4>Responses collected when the above generated art work is
+                     shown to the viewer. The responses contain diverse set of emotions and various explanations for the same.</h4>
+                </figcaption>
+                <!-- <caption>.</caption> -->
+            </figure>
+        </div>
+    </div>
+
+
+    <div class="row" id="video" style="padding-bottom:30px">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                <b>Video</b>
+            </h3>
+           <video id="v0" width="100%" loop="" muted="" controls="">
+               <source src="assets/waga_longer.mp4" type="video/mp4">
+           </video>
+<!--             <iframe width="100%" height="400"
+                src="https://www.youtube.com/embed/yEdf24hF_sY">
+            </iframe> -->
+
+        </div>
+
+    </div>
+
+    
+    <div class="row" style="padding-bottom:30px">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                <b>Motivation</b>
+            </h3>
+        </div>
+
+        <div class="col-md-8 col-md-offset-2">
+            <ol>
+                <li>
+                    There exists such analysis by Elgammal et. al. in 2018
+                    in their paper <i>The Shape of Art History in the Eyes of the Machine</i>.
+                    But these analysis is only on real art. Since generated art work are becoming more and 
+                    more popular we want to do this analysis on generated artwork. 
+                    In contrast
+                    to (Elgammal et al. 2018), which used only real art for
+                    its analysis, our study focuses on the contrast between real
+                    and AI art generated using state-of-the-art GAN models like StyleGAN1 and StyleGAN2.
+                </li>
+                <li>
+                    We also want to discover correlations between emotion constructed in the viewer vs. the overall structure
+                    of the artwork. We model the structure of the artwork using Wölfflin principles data gathered on Amazon Mechanical
+                    Turk.
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row" style="padding-bottom:30px">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                <b>Contributions</b>
+            </h3>
+        </div>
+
+        <div class="col-md-8 col-md-offset-2">
+            <ol>
+                <li>
+                    We introduce StyleCAN v1 and v2
+                    by integrating the CAN loss StyleGAN v1 and StyleGAN
+                    v2 models and observe that StyleCAN v1 and v2 have
+                    higher mean average likeability compared to StyleGAN v1
+                    and StyleGAN v2.
+                </li>
+                <li>
+                    We present a novel study on how
+                    AI Art generative models learn inherent features of our
+                    art heritage like Wolfflin’s principles. We also study the 
+                    ability of these models to constructs our emotional experiences compared to real art
+                </li>
+                <li>
+                    We collect Wolfflin principles annotations on real and AI art. We also collect
+                    emotion labels and their explanation on AI art.                    
+                </li>
+                <li>
+                    Using the collected data, we performed detailed analysis that
+                    contrast real art and AI art based on Wolfflin’s principles,
+                    constructed emotion categories, and corresponding explanations. We also observed connections between Wolfflin’s ¨
+                    principles and the constructed emotional experiences.                    
+                </li>
+            </ol>
+        </div>
+    </div>    
+
+
+    <div class="row" style="padding-bottom:30px">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                <b>Wölfflin's principles collection interfaces</b>
+            </h3>
+            Heinrich Wölfflin (a swiss art historian) formulated five pairs of opposed or contrary precepts in the form and style of art of the 
+            sixteenth and seventeenth centuries which demonstrated a shift in the nature of artistic vision between the two periods. To collect these principles
+            we trained the Amazon Mechanical Turkers using some sample examples. The user interface created for each is linked below.         
+
+            
+        </div>
+
+
+        <div class="col-md-8 col-md-offset-2 text-center" style="padding-top:30px">
+            <ul class="nav nav-pills nav-justified">
+                <li>
+                    <a href="linearly-vs-painterly.html">
+                        <h4><strong>Linearly vs Painterly</strong></h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="planar_recessional.html">
+                        <h4><strong>Planar vs Recessional</strong></h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="closed-open-form.html">
+                        <h4><strong>Closed-form vs Open-form
+                        </strong></h4>
+                    </a>
+                </li> 
+                <li>
+                    <a href="multiplicity-unity.html">
+                        <h4><strong>Multiplicity vs Unity
+
+                        </strong></h4>
+                    </a>
+                </li>    
+                <li>
+                    <a href="absolute-relative-clarity.html">
+                        <h4><strong>Absolute clarity vs Relative clarity
+                        </strong></h4>
+                    </a>
+                </li>                                                  
+            </ul>
+        </div>   
+
+    </div>  
+    
+    
+    <div class="row" style="padding-bottom:30px">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                <b>StyleCAN</b>
+            </h3>
+
+            <img src="assets/styleCAN.png" class="img-responsive" alt="StyleCAN">
+
+            We attach the Holistic-CAN loss (Sbai et. al 2018) an improved version of CAN (Elgammal et. al. 2017)
+            on state of the art GAN architectures like StyleGAN1(Karras et. al. 2019) and StyleGAN2 (Karras et. al. 2020).
+            We name it Style Creative Adversarial Network (StyleCAN)
+
+            <h5>
+                <b>Some sample generations</b>
+            </h5>            
+
+            <img src="assets/sample-generations.png" class="img-responsive" alt="StyleCAN">
+            
+        </div>
+
+        
+        
+    </div>
+    
+    
+    <div class="row" style="padding-bottom:30px">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                <b>Likeability experiments</b>
+            </h3>
+            
+            <div style="padding-bottom:30px">
+            <img src="assets/likeability_exp.png" style="border:1px solid; padding-bottom:20px" class="img-responsive" alt=""/>
+
+            </div>
+
+            <div style="padding-bottom:30px">
+
+                We conducted likeability survey and asked the following two questions.
+                <ol>
+                    <li>
+                        How much do you like this image? (on a scale of 5)
+                    </li>
+                    <li>
+                        Do you think this image was created by artist or generated by computer?
+                    </li>
+                </ol>
+                The table below summarizes the results from this experiments. The art 
+                generated by CAN loss models are more likeable and more people believed
+                it to be generated by real artists.
+
+            </div>
+
+
+
+            <img src="assets/likeability_res.png" class="img-responsive" alt=""/>
+        </div>
+    </div>
+
+
+    <div class="row" style="padding-bottom:30px">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                <b>Emotion experiments</b>
+            </h3>
+            
+            <div style="padding-bottom:30px">
+            <img src="assets/emotion_exp.png" style="border:1px solid; padding-bottom:20px" class="img-responsive" alt=""/>
+
+            </div>
+
+            <div style="padding-bottom:30px">
+
+                We collected emotions using the above interface and and in text why the viewer felt the way they felt.
+                The histogram of emotions for different models is presented below.
+
+            </div>
+
+
+
+            <img src="assets/emotion_dist.png" class="img-responsive" alt=""/>
+
+
+        </div>
+
+    </div>    
+    
+    <div class="row" style="padding-bottom:30px">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                <b>Correlation analyses</b>
+            </h3>
+            
+            <div style="padding-bottom:30px">
+                <img src="assets/corr.png" style="padding-bottom:20px" class="img-responsive" alt=""/>
+                Pearson's correlation coefficients of features of various architectures on real art and generated art 
+                computed for all the Wölfflin principles. The term ""vs" is used in the table to compare opposing 
+                concepts of each Wölfflin principle.                
+            </div>
+            <hr>
+            <div style="padding-bottom:30px">
+                <img src="assets/emo_corr.png" style="padding-bottom:20px" class="img-responsive" alt=""/>
+                Weights of  the linear classifier when trained on Wölfflin's principle to different emotions.
+                 The term "vs" is used in the table to compare opposing concepts of each Wölfflin principle.
+                 People feel amused when the painting is more towards "Multiplicity" than "Unity." because of the 
+                 negative correlation. Similarly, people feel anger when the artwork has more "Relative Clarity" 
+                 than "Absolute Clarity"". We can find more such correlations from the table.
+            </div>            
+
+        </div>
+       
+        
+    </div>
+
+    <div class="row" style="padding-bottom:30px">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                <b>Key observations</b>
+            </h3>
+            
+            <ol>
+                <li>
+                    We observe that the discriminator of GANs
+                    learn the Wolfflin principles inherently as we observe
+                    stronger correlation values as compared to traditional
+                    classifiers.                    
+                </li>
+                <li>
+                    We find that the generated art works construct
+                    diverse set of emotions in the viewer                    
+                </li>
+                <li>
+                    We also find strong correlation between these
+                    emotions and Wolfflin’s principles. We find these principles 
+                    can be used to predict the emotion of an art piece.
+                    Hence, being able to compute specific Wolfflin priciple
+                    can predict the emotion that the art piece will construct.                    
+                </li>
+            </ol>
+
+        </div>
+       
+        
+    </div>    
+    
+        <div class="row" id="citation" style="padding-bottom:30px">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                <b>Citation</b>
+            </h3>
+            If you find our work useful in your research, please consider citing:
+        <!-- <pre class="w4-panel w4-centerbar w4-light-grey" style="font-size: 11px">
+@article{elhoseiny2021imaginative,
+  title={Imaginative Walks: Generative Random Walk Deviation Loss for Improved Unseen Learning Representation},
+  author={Elhoseiny, Mohamed and Jha, Divyansh and Yi, Kai and Skorokhodov, Ivan},
+  journal={arXiv preprint arXiv:2104.09757},
+  year={2021}
+}</pre> -->
+        </div>
+    </div>
+
+</html>

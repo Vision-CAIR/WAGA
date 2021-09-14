@@ -1,3 +1,2 @@
-# wölfflin-affective-generative-analysis
-
-The code of the paper will be uploaded soon.
+# imaginative-walks.github.io
+Wölfflin Affective Generative Analysis homepage.
