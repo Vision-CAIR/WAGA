@@ -34,10 +34,10 @@ bash stylecan2.sh
 
 ### StyleCAN1
 
-![StyleCAN1 sample]("./samples/StyleCAN1.png")
+![StyleCAN1 sample](./samples/StyleCAN1.png)
 
 ### StyleCAN2
 
-![StyleCAN2 sample]("./samples/StyleCAN2.png")
+![StyleCAN2 sample](./samples/StyleCAN2.png)
 
 
