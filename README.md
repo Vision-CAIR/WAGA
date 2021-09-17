@@ -51,6 +51,25 @@ To run analysis notebooks, first download precomputed features on generated and 
 
 Navigate to `analyses_notebooks` path and run the notebook of your choice.
 
+### Directory structure
+
+```
+├── analyses_notebooks
+│   ├── datasets
+│   │   ├── features <- Extracted features goes here
+│   │   ├── processed
+│   │   └── raw
+│   ├── emotion_plot.ipynb
+│   ├── get_best_correlation_coefficients_for_wofflin_principle.ipynb
+│   └── train_wofflin_to_emotion.ipynb
+├── LICENSE
+├── README.md
+├── samples
+├── StyleCAN1
+├── StyleCAN2
+└── wikiart <- Extracted wikiart dataset goes here.
+```
+
 ## Sample Results
 
 ### StyleCAN1
